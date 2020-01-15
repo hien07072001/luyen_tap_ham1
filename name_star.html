@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <input type="text" id="f1" placeholder="nhap ten"
+    oninput="star(this.value)"
+    onchange="star(this.value)">
+    <span id="f2">Result:</span>
+</head>
+<body>
+<script>
+    let a=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'] ;
+    let b=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+    function star(n){
+        let message='';
+        let i= a.indexOf(n);
+        if( i != -1){
+            message=a[i]+"la"+b[i];
+
+        }else {
+            message="khong co trong danh sach"
+        }
+        document.getElementById('f2').innerHTML=message;
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>Meters</p>
+    <input type="Number" id="meters" placeholder="Meters"
+           onchange="convertFeetToMeters(this.value)"
+           oninput="convertFeetToMeters(this.value)">
+    <p>Result:<span id="output"></span></p>
+</form>
+<form>
+    <p>Feet</p>
+    <input type="Number" id="foot" placeholder="Feet"
+    oninput="convertMetersToFeet (this.value)"
+    onchange="convertMetersToFeet(this.value)">
+</form>
+<span id="input"></span>
+<script>
+    function convertFeetToMeters(valNum) {
+        valNum=parseFloat(valNum);
+        document.getElementById("output").innerHTML = 0.305 * valNum;
+
+    }
+    function convertMetersToFeet(valNum) {
+        valNum=parseFloat("valNum");
+        document.getElementById("input").innerHTML = 3.279 * valNum;
+
+    }
+</script>
+</body>
+
+</html>

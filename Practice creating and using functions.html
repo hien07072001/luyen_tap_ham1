@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <from>
+        <input type="Number" id="doiso" placeholder="doiSo"
+        oninput="Argument(this.value)"
+        onchange="Argument(this.value)">
+        <span id="f1">Result of adding 1 to argument</span>
+    </from>
+
+    <p></p>
+    <from>
+        <span >so1</span>
+        <input type="Number" id="so1" placeholder="nhapso1"
+        oninput="Parameter(this.value)"
+        onchange="Parameter(this.value)">
+    </from>
+    <from>
+        <span>so2</span>
+        <input type="Number" id="so2" placeholder="nhapso2"
+        oninput="Parameter(this.vlue)"
+        onchange="Parameter(this.value)">
+    </from>
+    <span id="ketqua">Result:</span>
+</head>
+<body>
+
+<script>
+    // bai_1;
+    let Answers=function (alertMessage) {
+        alert("xin chao")
+    };
+    Answers();
+
+</script>
+
+<script>
+    //bai2
+    function Argument(valNum) {
+        valNum=parseInt(valNum);
+        valNum++;
+        document.getElementById("f1").innerHTML=valNum;
+
+    }
+</script>
+<script>
+    //bai3
+function Parameter(x,y) {
+    x =parseFloat(document.getElementById('so1').value);
+    y=parseFloat(document.getElementById('so2').value);
+    let tong = x+y;
+    let message='';
+    if (isNaN(x)===false && isNaN(y)===false){
+        if (x>y){
+            message= x +'is bigger than'+ y
+        }else {
+            message="tong cua" + x + "va" + y +"la:" + tong
+        }
+
+    }document.getElementById("ketqua").innerHTML=message;
+
+}
+</script>
+<p></p>
+<SCRIPT>
+let firstNum,secondNum,result;
+function addNumbers() {
+    firstNum = 4;
+    secondNum = 5;
+    result = firstNum + secondNum;
+    return result;
+}
+result=0;
+alert(result);
+    result=addNumbers();
+    alert(result)
+</Script>
+
+</body>
+</html>
